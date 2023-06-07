@@ -10,7 +10,7 @@ export KBUILD_BUILD_USER="picasso"
 #mulai mengcompile kernel
 [ -d "out" ] && rm -rf out  mkdir -p out
 
-make O=out ARCH=arm64 oppo6769_defconfig
+make O=out ARCH=arm64 RMX2189_defconfig
 
 PATH="${PWD}/clang/bin:${PATH}:${PWD}/aarch32-gcc/bin:${PATH}:${PWD}/aarch64-gcc/bin:${PATH}" \
 make -j$(nproc --all) O=out \
